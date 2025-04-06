@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        li:hover {
+            background-color: #f1f1f1;
+        }
+        .task-title {
+            font-size: 16px;
+            color: #555;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+        .task-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .delete-btn, .complete-btn {
+            text-decoration: none;
+            padding: 6px 12px;
+            background-color: #FF4C4C;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .delete-btn:hover, .complete-btn:hover {
+            background-color: #FF2A2A;
+        }
+        .add-task-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .add-task-btn:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .user-guide {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+        .user-guide h2 {
+            color: #4CAF50;
+            font-size: 18px;
+        }
+        .user-guide ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>To-Do List</h1>
+    
+    <ul>
+        <!-- Dummy Tasks for Testing -->
+        <li>
+            <span class="task-title">Finish Django tutorial</span>
+            <div class="task-actions">
+                <a href="#" class="delete-btn">Delete</a>
+                <a href="#" class="complete-btn">Complete</a>
+            </div>
+        </li>
+        <li>
+            <span class="task-title">Buy groceries</span>
+            <div class="task-actions">
+                <a href="#" class="delete-btn">Delete</a>
+                <a href="#" class="complete-btn">Complete</a>
+            </div>
+        </li>
+        <li>
+            <span class="task-title">Work on To-Do App</span>
+            <div class="task-actions">
+                <a href="#" class="delete-btn">Delete</a>
+                <a href="#" class="complete-btn">Complete</a>
+            </div>
+        </li>
+    </ul>
+
+    <a href="{% url 'add_task' %}" class="add-task-btn">Add Task</a>
+
+    <div class="footer">
+        <p>Made with ❤️ by P. Mapanzure
+        </p>
+    </div>
+
+    
+</div>
+
+</body>
+</html>
